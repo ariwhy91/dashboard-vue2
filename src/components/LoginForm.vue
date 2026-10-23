@@ -40,7 +40,10 @@ const fitur = [
 
         <div class="brand-copy">
           <h2>Manage Sales In a Single Dashboard</h2>
-          <p>Ringkasan pendapatan, performa produk, dan pesanan — semuanya dalam satu dasboard.</p>
+          <p>
+            Ringkasan pendapatan, performa produk, dan pesanan — semuanya dalam satu dasboardgit
+            statu.
+          </p>
         </div>
 
         <ul class="fitur">
