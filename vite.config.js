@@ -15,4 +15,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  server: {
+    // Backend hanya meng-allow origin http://localhost:5174 (CORS).
+    port: 5174,
+    strictPort: true, // gagal dengan jelas kalau port terpakai, jangan pindah diam-diam ke port lain
+  },
 })

@@ -5,6 +5,7 @@ const API = import.meta.env.VITE_API_URL || 'http://localhost:8001'
 export const useAuthStore = defineStore('auth', {
   state: () => ({
     token: null, // tetap di memori saja: hilang saat refresh, sama seperti sebelumnya
+    username: '',
   }),
   getters: {
     isLoggedIn: (state) => state.token !== null,
@@ -23,9 +24,11 @@ export const useAuthStore = defineStore('auth', {
       }
       const data = await response.json()
       this.token = data.access_token
+      this.username = username
     },
     logout() {
       this.token = null
+      this.username = ''
     },
     async apiFetch(path, options = {}) {
       const response = await fetch(`${API}${path}`, {
